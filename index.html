@@ -12,6 +12,7 @@
         body{
             background-image: url(https://images.unsplash.com/photo-1580508158643-4bf9f8da03c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHZhbGVudGluZSdzJTIwZGF5JTIwY2FyZHxlbnwwfHwwfHx8MA%3D%3D);
             background-size: cover;
+            background-position: center;
         }
 
 
@@ -75,9 +76,73 @@ button:focus {
 h1{
     color: white;
     font-size: 50px;
+    text-align: center;
     font-family: "Protest Riot", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@media screen and (max-width:1090px) {
+    .no{
+        left: 56%;
+    }
+    .yes{
+        left: 35%;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .no{
+        left: 60%;
+    }
+    .yes{
+        left: 30%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .no{
+        left: 65%;
+    }
+    .yes{
+        left: 25%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .no{
+        left: 60%;
+    }
+    .yes{
+        left: 15%;
+    }
+    h1{
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .no{
+        left: 65%;
+    }
+    .yes{
+        left: 10%;
+    }
+    h1{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .no{
+        left: 70%;
+    }
+    .yes{
+        left: 5%;
+    }
+    h1{
+        font-size: 26px;
+    }
 }
 
     </style>
@@ -91,7 +156,7 @@ h1{
         </div>
         <div class="button">
             <button class="yes" onclick="yes()">YES</button>
-            <button class="no" onmouseenter="no()">NO</button>
+            <button class="no" onmouseenter="no()" onclick="no()">NO</button>
         </div>
         
 
