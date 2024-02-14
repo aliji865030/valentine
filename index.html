@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+        
+
+        body{
+            background-image: url(https://images.unsplash.com/photo-1580508158643-4bf9f8da03c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHZhbGVudGluZSdzJTIwZGF5JTIwY2FyZHxlbnwwfHwwfHx8MA%3D%3D);
+            background-size: cover;
+        }
+
+
+      .main{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .no{
+        position: absolute;
+        left: 54%;
+        background-color: rgb(178, 31, 31);
+        padding: 5px 10px;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+      }
+      .yes{
+        background-color: green;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        left: 37%;
+      }
+
+      button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #18459e 0%, #b3cabf 80%, #7c2828 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.5s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+button:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+button:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+button:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1>Will you be my valentine</h1>
+        <div class="image">
+        <img src="https://images.unsplash.com/photo-1517758344467-7043e91d33cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHZhbGVudGluZSdzJTIwZGF5fGVufDB8fDB8fHww" alt="">
+        </div>
+        <div class="button">
+            <button class="yes" onclick="yes()">YES</button>
+            <button class="no" onmouseenter="no()">NO</button>
+        </div>
+        
+
+        
+    </div>
+
+    <script>
+        
+        function no(){
+            let btn=document.querySelector(".no")
+            btn.style.left=`${Math.floor(Math.random()*90)}%`
+            btn.style.top=`${Math.floor(Math.random()*90)}%`
+            
+        }
+        function yes(){
+            document.querySelector(".main").innerHTML="";
+            document.querySelector(".main").innerHTML=`
+            <video width="100%" height="100%"  autoplay loop>
+            <source src="./love.mp4" type="video/mp4">
+            </video>
+            `
+           
+
+        }
+
+
+    </script>
+</body>
+
+</html>
